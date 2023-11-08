@@ -1,0 +1,38 @@
+<!--
+Ahmad Fathur Rohman
+121140082 - RB 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Fathur Rohman |Bilangan Ganjil Genap</title>
+</head>
+<body>
+    <h1>Masukkan Bilangan Ganjil Dan Genap</h1>
+    <label for="bilangan">Masukkan bilangan bulat positif:</label>
+    <input type="number" id="bilangan" min="1">
+    <button onclick="hitungGanjilGenap()">Hitung</button>
+    <p>Jumlah bilangan ganjil: <span id="ganjil"></span></p>
+    <p>Jumlah bilangan genap: <span id="genap"></span></p>
+
+    <script>
+        function hitungGanjilGenap() {
+            var bilangan = document.getElementById("bilangan").value;
+            var ganjil = 0;
+            var genap = 0;
+
+            for (var i = 1; i <= bilangan; i++) {
+                if (i % 2 === 0) {
+                    genap++;
+                } else {
+                    ganjil++;
+                }
+            }
+            document.getElementById("ganjil").innerText = ganjil;
+            document.getElementById("genap").innerText = genap;
+        }
+    </script>
+</body>
+</html>
